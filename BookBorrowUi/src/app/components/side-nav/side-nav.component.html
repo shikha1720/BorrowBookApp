@@ -1,0 +1,18 @@
+<div class="container" *ngIf="this.api.isLoggedIn()">
+    <p>Tokens Available</p>
+<div class="circle">
+    {{tokenAvailable}}
+</div>
+</div>
+
+<mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let option of sideNavContent"
+        routerLink="/{{option.link}}" routerLinkActive="active">
+        <ng-container *ngIf="option.title == 'view books' && !this.api.isLoggedIn()">
+            {{option.title | titlecase}}
+        </ng-container>
+        <ng-container *ngIf="this.api.isLoggedIn() && (option.title == 'add new book' || 'my borrowed books' || 'my lent books')">
+        {{option.title | titlecase}}
+    </ng-container>
+    </mat-list-item>
+</mat-list>

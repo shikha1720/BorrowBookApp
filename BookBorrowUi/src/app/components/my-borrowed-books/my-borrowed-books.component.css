@@ -1,0 +1,55 @@
+.nobook{
+    margin: 10px;
+    color: red;
+}
+
+h1{
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
+}
+.mat-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 20px;
+}
+  
+.mat-card-horizontal {
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding : 10px;
+}
+
+mat-card-header{
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color:lightseagreen;
+}
+
+mat-card-subtitle{
+    color:lightgrey;
+    margin-left:15px;
+
+}
+
+/* mat-card-actions {
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  } */
+  

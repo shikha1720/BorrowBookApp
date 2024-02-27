@@ -1,0 +1,12 @@
+mat-toolbar{
+    height: 2rem;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+p {
+    margin: 0;
+    font-size: 15px;
+}

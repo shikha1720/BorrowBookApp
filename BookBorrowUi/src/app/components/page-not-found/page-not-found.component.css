@@ -1,0 +1,26 @@
+.container{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.p1{
+    font-size: 50px;
+    font-weight: bold;
+    color: brown;
+    padding:20px;
+}
+
+.p2{
+    font-size: 40px;
+    font-weight: bold;
+    color: gray;
+    padding:20px;
+
+}
+
+.p3{
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+    font-style: italic;
+}

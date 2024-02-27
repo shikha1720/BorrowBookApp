@@ -1,0 +1,16 @@
+<h1>My Lent Books</h1>
+
+<p class="nobook" *ngIf="listOfLentBooks.length === 0"> You have't Lent Any Book yet If wan't Click on Add New Book in the Dashboard. </p>
+
+<div *ngFor="let book of listOfLentBooks" class="mat-card-container">
+    <mat-card class="mat-card-horizontal" [routerLink]="['/bookDetails/', book.id]">
+      <mat-card-header>
+        {{book.name}}
+      </mat-card-header>
+      <mat-card-content>
+        <p><strong>Written By : </strong> {{ book.author }}</p>
+        <p><strong>Genre :</strong> {{ book.genre }}</p>
+        <p><strong>Status :</strong> {{book.isBookAvailable ? 'Available' : 'Not Available'}} </p>
+      </mat-card-content>
+    </mat-card>
+  </div>

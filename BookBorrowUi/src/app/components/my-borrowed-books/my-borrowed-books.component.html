@@ -1,0 +1,24 @@
+<h1>My Borrowed Books</h1>
+<!-- <span *ngIf="!api.isLoggedIn()"><p>Login First to see your Borrowed Books.<a routerLink="/login">Click here to Login</a></p> -->
+<p class="nobook" *ngIf="listOfBorrowedBooks.length === 0 && api.isLoggedIn()"> You have't Borrowed Any Book </p>
+<!-- </span> -->
+
+
+<div *ngFor="let book of listOfBorrowedBooks" class="mat-card-container">
+    <mat-card class="mat-card-horizontal" [routerLink]="['/bookDetails/', book.bookId]">
+      <mat-card-header>
+        {{book.bookName}}
+      </mat-card-header>
+        <mat-card-subtitle>{{ book.genre }}</mat-card-subtitle>
+      <mat-card-content>
+        <p><strong>Status:</strong> {{ book.isReturned ? 'Returned' : 'Not Returned' }}</p>
+        <p><strong>Borrowed On:</strong> {{ book.borrowedOn }}</p>
+        <p *ngIf="book.isReturned"><strong>Retured On:</strong> {{ book.returnedOn }}</p>
+      </mat-card-content>
+      <!-- <mat-card-actions>
+        <div class="button-container">
+        <button mat-raised-button color="warn" *ngIf="!book.isReturned" (click)="returnBook(book)">Return Book</button>
+    </div>
+      </mat-card-actions> -->
+    </mat-card>
+  </div>

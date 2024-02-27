@@ -1,0 +1,84 @@
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh; 
+    margin: 1rem;
+}
+
+h1{
+    text-decoration: underline;
+}
+  
+mat-card {
+    width: 80vw; 
+    margin: 25px 15px;
+}
+
+mat-card-header{
+    font-size: 35px;
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: lightseagreen;
+}
+
+mat-label{
+    color: yellow;
+    margin-left:30px;
+    font-size: 20px;
+}
+
+mat-icon{
+    color: yellow;
+    font-size: 25px;
+}
+
+mat-card-title{
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 20px 0px;
+    color: lightgrey;
+}
+
+mat-card-subtitle{
+    font-size: 20px;
+    margin: 10px 0px;
+    color: gray;
+    margin-bottom: 20px;
+    margin-left: 14px;
+}
+  
+mat-card-content {
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    line-height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+mat-card-content p{
+    margin-left: 14px;
+}
+
+mat-card-actions{
+    margin: 10px;
+}
+
+mat-card-actions button{
+    margin-right: 10px;
+}
+
+span{
+    margin-left: 25px;
+    margin-top: 0;
+}
+
+span p {
+    color: red;
+}
+
+span a {
+    color: lightblue;
+}

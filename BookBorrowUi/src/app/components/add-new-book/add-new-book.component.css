@@ -1,0 +1,44 @@
+:host{
+    display: flex;
+    width: 70%;
+    gap: 2rem;
+    margin: 3rem auto;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.add mat-card-header{
+    margin:1rem;
+}
+
+.add mat-card-header mat-card-title{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+
+.add form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+.add form mat-form-field {
+    flex: 1 1 100%;
+}
+
+.add button{
+    width: 200px;
+    height: 50px;
+}
+
+/* .star-rating{
+    color:yellow;
+} */
+
+option{
+    background-color: lightgray;
+    padding: 16px;
+}
+

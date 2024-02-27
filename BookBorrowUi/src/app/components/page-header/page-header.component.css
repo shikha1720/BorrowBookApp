@@ -1,0 +1,51 @@
+:host{
+    display: block;
+    z-index: 3;
+}
+
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    align-items: center;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.user-info span {
+    margin-right: 0.5rem;
+}
+
+.user-info mat-icon{
+    transform: scale(1.4);
+}
+
+.menu-token-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu-token-container .token{
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 1.5rem;
+    height:1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: white;
+    color: purple;
+}
+
+h1{
+    margin: 0;
+    flex: 1;
+    text-align: center;
+}
+

@@ -1,0 +1,30 @@
+<div class="card-wrapper">
+  <h1>Book Details</h1>
+    <mat-card>
+      <mat-card-content>
+        <mat-card-header>
+            {{this.book.name}}
+          <mat-label> {{this.book.rating}} <mat-icon>star</mat-icon></mat-label>
+          </mat-card-header>
+        <mat-card-title> <span>Written By -</span>{{this.book.author}}</mat-card-title> 
+        <mat-card-subtitle>
+          {{this.book.genre}}
+        </mat-card-subtitle>
+        <p>
+          {{this.book.description}}
+        </p>
+
+        <span *ngIf="!this.book.isBookAvailable && api.isLoggedIn() && this.book.currentlyBorrowedByUserId != this.userId"><p>Not Available</p></span>
+      <span *ngIf="!api.isLoggedIn()"><p>Login First to Borrow Books.<a routerLink="/login">Click here to Login</a></p></span>
+      </mat-card-content>
+  
+      <mat-card-actions>
+        <button mat-raised-button color="accent" (click)="borrowBook(this.book)" *ngIf="this.book.isBookAvailable" [disabled]="userId == this.book.lentByUserId || !api.isLoggedIn() 
+        ">Borrow</button>
+        <button mat-raised-button color="warn" *ngIf="!this.book.isBookAvailable && api.isLoggedIn() && this.book.currentlyBorrowedByUserId == this.userId" (click)="returnBook(this.book)">Return</button>
+        <button mat-raised-button color="primary" routerLink="/books/library">Back</button>
+      </mat-card-actions>
+      
+    </mat-card>
+  
+  </div>
